@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
 
   query: string;
   news = [];
+  news1: News;
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
@@ -20,5 +21,10 @@ export class HeaderComponent implements OnInit {
   getResults() {
     
     this.newsService.getNews(this.query).subscribe(responseNews => this.news = responseNews.sources);
+  }
+
+  saveDetails(){
+    this.news.id= event.id.value
+    this.newsService.saveNews(this.news);
   }
 }

@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class ContentComponent implements OnInit {
 
   news1 = [];
-  news2 = [];
   news3 = [];
   news4 = [];
   news5 = [];
@@ -23,11 +22,6 @@ export class ContentComponent implements OnInit {
   getResults1() {
 
     this.contentService.getNews1().subscribe(responseNews => this.news1 = responseNews.sources);
-  }
-
-  getResults2() {
-
-    this.contentService.getNews2().subscribe(responseNews => this.news2 = responseNews.sources);
   }
 
   getResults3() {

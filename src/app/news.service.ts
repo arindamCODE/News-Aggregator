@@ -14,4 +14,10 @@ export class NewsService {
     getNews(search: string){
         return this.http.get(this.url+search).map((response: Response) => response.json());
     }
+
+    saveNews(News news){
+
+return this.http.post("")
+
+    }
 }
